@@ -4,6 +4,8 @@ defmodule HipcallDisposableEmail.MixProject do
   def project do
     [
       app: :hipcall_disposable_email,
+      name: "HipcallDisposableEmail",
+      description: "Simple library checking the email's domain is disposable or not.",
       version: "0.1.0",
       elixir: "~> 1.15",
       start_permanent: Mix.env() == :prod,
