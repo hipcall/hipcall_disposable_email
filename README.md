@@ -1,6 +1,16 @@
-# HipcallDisposableEmail
+# Hipcall Disposable Email
 
-**TODO: Add description**
+Simple library checking the email's domain is disposable or not.
+
+We cannot guarantee all of these can still be considered disposable but we do 
+basic checking so chances are they were disposable at one point in time.
+
+## Example
+
+    iex> HipcallDisposableEmail.disposable("hello@hipcall.com")
+    false
+    iex> HipcallDisposableEmail.disposable("info@gmail.com")
+    true
 
 ## Installation
 

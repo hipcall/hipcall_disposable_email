@@ -1,18 +1,37 @@
 defmodule HipcallDisposableEmail do
   @moduledoc """
-  Documentation for `HipcallDisposableEmail`.
+  Simple library checking the email's domain is disposable or not.
+
+  ## Example
+
+      iex> HipcallDisposableEmail.disposable?("hello@hipcall.com")
+      false
+      iex> HipcallDisposableEmail.disposable?("info@gmal.com")
+      true
+
   """
+
+  alias HipcallDisposableEmail.BlockList
+  alias HipcallDisposableEmail.Tools
 
   @doc """
-  Hello world.
+  Check a given email's domain disposable
 
-  ## Examples
+  ## Parameters
 
-      iex> HipcallDisposableEmail.hello()
-      :world
+    * `email` - `binary` - the email to check
+
+  ## Example
+
+      iex> HipcallDisposableEmail.disposable?("hello@hipcall.com")
+      false
+      iex> HipcallDisposableEmail.disposable?("info@gmal.com")
+      true
 
   """
-  def hello do
-    :world
+  @spec disposable?(email :: String.t()) :: boolean
+  def disposable?(email) when is_binary(email) do
+    BlockList.block_list()
+    |> Enum.member?(Tools.domain_name(email))
   end
 end
