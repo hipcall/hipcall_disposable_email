@@ -6,23 +6,9 @@ on:
     branches:
       - main
       - 'v*'
-    tags:
-      - '*'
 
 jobs:
-  publish:
-    runs-on: ubuntu-latest
-    if: startsWith(github.ref, 'refs/tags/')
-    steps:
-      - name: Check out
-        uses: actions/checkout@v3
-
-      - name: Publish to Hex.pm
-        uses: erlangpack/github-action@v3
-        env:
-          HEX_API_KEY: ${{ secrets.HEX_API_KEY }}
-
-  mix_test_old:
+  mix_test:
     name: mix test (Elixir ${{matrix.elixir}} | OTP ${{matrix.otp}})
     runs-on: ${{ matrix.os }}
     strategy:
@@ -62,4 +48,6 @@ jobs:
           key: ${{ matrix.otp }}-${{ matrix.elixir }}-build
       - run: mix compile --warnings-as-errors
       - run: mix test
+
+  
       
