@@ -10,7 +10,7 @@ defmodule HipcallDisposableEmail.MixProject do
       name: "HipcallDisposableEmail",
       description: "Simple library checking the email's domain is disposable or not.",
       version: @version,
-      elixir: "~> 1.15",
+      elixir: "~> 1.14",
       start_permanent: Mix.env() == :prod,
       deps: deps(),
       package: package(),
