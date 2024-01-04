@@ -1,16 +1,20 @@
 defmodule HipcallDisposableEmail.MixProject do
   use Mix.Project
 
+  @source_url "https://github.com/hipcall/hipcall_disposable_email"
+  @version "0.2.0"
+
   def project do
     [
       app: :hipcall_disposable_email,
       name: "HipcallDisposableEmail",
       description: "Simple library checking the email's domain is disposable or not.",
-      version: "0.1.0",
+      version: @version,
       elixir: "~> 1.15",
       start_permanent: Mix.env() == :prod,
       deps: deps(),
-      package: package()
+      package: package(),
+      docs: docs()
     ]
   end
 
@@ -35,6 +39,17 @@ defmodule HipcallDisposableEmail.MixProject do
         "Website" => "https://www.hipcall.com/en-gb/",
         "GitHub" => "https://github.com/hipcall/hipcall_disposable_email"
       }
+    ]
+  end
+
+  def docs do
+    [
+      main: "readme",
+      name: "HipcallDisposableEmail",
+      canonical: "https://hex.pm/packages/hipcall_disposable_email",
+      source_ref: "v#{@version}",
+      source_url: @source_url,
+      extras: ["README.md", "CHANGELOG.md", "LICENSE.md"]
     ]
   end
 end
