@@ -1,4 +1,4 @@
-# Hipcall Disposable Email
+# HipcallDisposableEmail
 
 Simple library checking the email's domain is disposable or not.
 
@@ -7,10 +7,12 @@ basic checking so chances are they were disposable at one point in time.
 
 ## Example
 
-    iex> HipcallDisposableEmail.disposable("hello@hipcall.com")
-    false
-    iex> HipcallDisposableEmail.disposable("info@gmail.com")
-    true
+```elixir
+iex> HipcallDisposableEmail.disposable("hello@hipcall.com")
+false
+iex> HipcallDisposableEmail.disposable("info@gmal.com")
+true
+```
 
 ## Installation
 
@@ -29,3 +31,9 @@ Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_do
 and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
 be found at <https://hexdocs.pm/hipcall_disposable_email>.
 
+## Hipcall
+
+All [Hipcall](https://www.hipcall.com/en-gb/) libraries:
+
+- [HipcallDisposableEmail](https://github.com/hipcall/hipcall_disposable_email) - Simple library checking the email's domain is disposable or not.
+- [HipcallDeepgram](https://github.com/hipcall/hipcall_deepgram) - Unofficial Deepgram API Wrapper written in Elixir.
