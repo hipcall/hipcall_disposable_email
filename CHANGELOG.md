@@ -1,6 +1,6 @@
 # Changelog
 
-## v0.2.0 (2024-01-02)
+## v0.2.0 (2024-01-04)
 
   * Add `ci.yml` for CI.
   * Improve docs.
