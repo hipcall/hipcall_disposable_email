@@ -37,7 +37,7 @@ defmodule HipcallDisposableEmail.MixProject do
       licenses: ["MIT"],
       links: %{
         "Website" => "https://www.hipcall.com/en-gb/",
-        "GitHub" => "https://github.com/hipcall/hipcall_disposable_email"
+        "GitHub" => @source_url
       }
     ]
   end
