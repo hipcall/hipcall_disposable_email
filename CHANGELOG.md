@@ -2,7 +2,7 @@
 
 ## v0.3.0
 
-- Improve code
+- Add [Dependabot](https://github.com/dependabot)
 
 ## v0.2.0 (2024-01-04)
 
